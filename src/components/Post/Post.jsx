@@ -4,6 +4,8 @@ import { useState } from "react";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 import { Button } from "@mui/material";
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export default function Post(props){
 
@@ -28,6 +30,9 @@ export default function Post(props){
             <Button className="dislike-btn" variant="contained" startIcon={<ThumbDownIcon/>} onClick={decrementLikes}>
                 Dislike {dislikes}
             </Button>
+            <IconButton className='delete-btn' color="info" aria-label="delete" size="large">
+                <DeleteIcon fontSize="inherit" />
+            </IconButton>
         </div>
     );
 }

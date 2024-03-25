@@ -1,0 +1,17 @@
+.create-posts-container{
+    background-color: #242424; 
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+}
+
+.create-posts-container .post-input{
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 10px;
+}
+
+.create-posts-container .create-btn{
+    padding: 16px;
+    border-radius: 10px;
+}
