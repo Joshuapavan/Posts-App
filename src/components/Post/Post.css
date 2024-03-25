@@ -6,7 +6,9 @@
 .post-container .text{
     background-color: #363636; 
     border-radius: 10px;
-    justify-content: center;
+    padding: 7px;
+    /* justify-content: center; */
+    display: flex;
 }
 
 .post-container .like-btn{
