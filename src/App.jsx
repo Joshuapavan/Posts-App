@@ -1,4 +1,4 @@
-import Post from './components/Post'
+import Post from './components/Post/Post'
 import './App.css'
 
 function App() {
