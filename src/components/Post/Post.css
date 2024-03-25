@@ -11,6 +11,11 @@
     display: flex;
 }
 
+.post-container .post-actions-container{
+    display: flex;
+    justify-content: center;
+}
+
 .post-container .like-btn{
     margin-right: 10px;
     margin-bottom: 10px;

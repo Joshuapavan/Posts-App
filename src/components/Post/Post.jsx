@@ -11,6 +11,7 @@ export default function Post(props){
 
     const [likes , setLikes] = useState(0);
     const [dislikes, setDislikes] = useState(0);
+    const [posts, setPosts] = useState([]);
 
     const incrementLikes = () => {
         setLikes(prev => prev + 1);
@@ -20,19 +21,25 @@ export default function Post(props){
         setDislikes(prev => prev + 1);
     }
 
+    function deletePost(index){
+        setPosts(posts.filter((_, i) => i !== index))
+    }
+
 
     return(
         <div className="post-container">
             <h1 className="text">Text</h1>
-            <Button className="like-btn" variant="contained" startIcon={<ThumbUpIcon/>} onClick={incrementLikes}>
-                Like {likes}
-            </Button>
-            <Button className="dislike-btn" variant="contained" startIcon={<ThumbDownIcon/>} onClick={decrementLikes}>
-                Dislike {dislikes}
-            </Button>
-            <IconButton className='delete-btn' color="info" aria-label="delete" size="large">
-                <DeleteIcon fontSize="inherit" />
-            </IconButton>
+            <div className='post-actions-container'>
+                <Button className="like-btn" variant="contained" startIcon={<ThumbUpIcon/>} onClick={incrementLikes}>
+                    Like {likes}
+                </Button>
+                <Button className="dislike-btn" variant="contained" startIcon={<ThumbDownIcon/>} onClick={decrementLikes}>
+                    Dislike {dislikes}
+                </Button>
+                <IconButton onClick={() => deletePost(index)} className='delete-btn' color="info" aria-label="delete" size="large">
+                    <DeleteIcon fontSize="inherit" />
+                </IconButton>
+            </div>
         </div>
     );
 }
