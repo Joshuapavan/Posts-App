@@ -7,11 +7,10 @@ import { Button } from "@mui/material";
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function Post(props){
+export default function Post({ post, index, deletePost }){
 
     const [likes , setLikes] = useState(0);
     const [dislikes, setDislikes] = useState(0);
-    const [posts, setPosts] = useState([]);
 
     const incrementLikes = () => {
         setLikes(prev => prev + 1);
@@ -21,14 +20,14 @@ export default function Post(props){
         setDislikes(prev => prev + 1);
     }
 
-    function deletePost(index){
-        setPosts(posts.filter((_, i) => i !== index))
-    }
+    const handleDelete = (index) => {
+        deletePost(index)
+    };
 
 
     return(
         <div className="post-container">
-            <h1 className="text">Text</h1>
+            <h1 className="text">{ post.text }</h1>
             <div className='post-actions-container'>
                 <Button className="like-btn" variant="contained" startIcon={<ThumbUpIcon/>} onClick={incrementLikes}>
                     Like {likes}
@@ -36,7 +35,7 @@ export default function Post(props){
                 <Button className="dislike-btn" variant="contained" startIcon={<ThumbDownIcon/>} onClick={decrementLikes}>
                     Dislike {dislikes}
                 </Button>
-                <IconButton onClick={() => deletePost(index)} className='delete-btn' color="info" aria-label="delete" size="large">
+                <IconButton onClick={() => handleDelete(index)} className='delete-btn' color="info" aria-label="delete" size="large">
                     <DeleteIcon fontSize="inherit" />
                 </IconButton>
             </div>
