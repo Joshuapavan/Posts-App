@@ -1,8 +1,50 @@
-# React + Vite
+# Posts App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple social media style posts application built with React and Vite. Users can create, like, dislike, and delete posts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create new posts
+- Like and dislike posts
+- Delete posts
+- Material UI components
+- Responsive design
+- Dark theme
+
+## Tech Stack
+
+- React
+- Vite
+- Material UI
+- Tailwind CSS
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+3. Run development server:
+```bash
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+src/
+  ├── components/
+  │   ├── CreatePost/
+  │   └── Post/
+  ├── App.jsx
+  ├── main.jsx
+  └── index.css
+```
